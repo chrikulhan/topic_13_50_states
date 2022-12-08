@@ -1,0 +1,63 @@
+Video 1
+
+//**Vue Routing**
+
+**Most sites have more than one page**
+
+-Recall that Vue (and React and Angular) are "single page web apps"
+-Are you only able to create one page?
+-No, your app can appear to have many pages
+-There is technically only one page, but the content shown in that page can
+    completely change
+-To enable this, need to use a router to describe a URL for each page;
+    each page will be associated with a component
+-This component can have child components, as usual
+-In a Vue app, when navigating to another page, use the router to change pages
+    and load the component for that page
+-This is similar, but not the same, as routing on the server
+-Server routing and client routing are completely independent
+
+//**50 States**
+-Uses vue-router to navigate between the pages
+-PostgreSQL database to store data about each state
+-Uses the same component for the header and footer for each page
+
+Code: https://github.com/claraj/50-states-vue-3
+from this ^^ readme:
+"50 States (and DC)
+
+A vue app to track which states have been visited
+
+Topics covered
+
+    CSS Flexbox
+    Vue routing and navigation
+    Leaflet maps in Vue
+    Seeding Sequelize database
+
+Example curl commands for patch route
+
+Should response with state not found curl -X PATCH --data '{"visited":false}' -H "Content-Type: Application/JSON" 127.0.0.1:3000/api/states/qwerty
+curl -X PATCH --data '{"visited":false}' -H "Content-Type: Application/JSON" 127.0.0.1:3000/api/states/Iowa
+curl -X PATCH --data '{"visited":true}' -H "Content-Type: Application/JSON" 127.0.0.1:3000/api/states/California"
+"
+
+***New project setup****
+1. Create new directory (50-states)
+-Run npm init
+    ^^creates a package.json file with logical defaults
+
+-package name = 50-states
+-version, press enter
+-description= Have you visited all the states?
+-entry point = server.js
+-Press enter for test command, git repository, keywords
+-author = Enter your first name
+-License, press enter
+-Press enter to create package.json file
+
+//in 50-states check directory (ls), should have:
+package.json
+
+2. check in correct directory 50-states(ls), npm install express
+
